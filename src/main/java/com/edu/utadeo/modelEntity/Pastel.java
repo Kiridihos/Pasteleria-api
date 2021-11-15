@@ -32,6 +32,10 @@ public class Pastel implements Serializable{
 	@Column
 	private String adicional;
 	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="tipo_empleado.id")
+	private Empleado empleado;
+	
 	//Getters and Setters
 
 	public long getId() {
@@ -72,6 +76,14 @@ public class Pastel implements Serializable{
 
 	public void setAdicional(String adicional) {
 		this.adicional = adicional;
+	}
+
+	public Empleado getEmpleado() {
+		return empleado;
+	}
+
+	public void setEmpleado(Empleado empleado) {
+		this.empleado = empleado;
 	}
 	
 	
