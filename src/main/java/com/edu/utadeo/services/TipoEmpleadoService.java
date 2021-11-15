@@ -2,6 +2,7 @@ package com.edu.utadeo.services;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -26,12 +27,14 @@ public class TipoEmpleadoService implements ITipoEmpleadoService {
 	}
 
 	@Override
+	
 	public void delete(Long id) {
 		// TODO Auto-generated method stub
 		tipoEmpleadoDao.deleteById(id);
 	}
 
 	@Override
+	
 	public TipoEmpleado findById(Long id) {
 		// TODO Auto-generated method stub
 		Optional<TipoEmpleado> tipoEmpleado= tipoEmpleadoDao.findById(id);
@@ -40,6 +43,18 @@ public class TipoEmpleadoService implements ITipoEmpleadoService {
 		} else {
 			return null;
 		}
+	}
+
+	@Override
+	public void delete(UUID id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public TipoEmpleado findById(UUID id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

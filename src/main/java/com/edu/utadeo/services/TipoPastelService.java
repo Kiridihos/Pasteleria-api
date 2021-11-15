@@ -2,6 +2,7 @@ package com.edu.utadeo.services;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -26,12 +27,14 @@ public class TipoPastelService implements ITipoPastelService {
 	}
 
 	@Override
+	
 	public void delete(Long id) {
 		// TODO Auto-generated method stub
 		tipoPastelDao.deleteById(id);
 	}
 
 	@Override
+	
 	public TipoPastel findById(Long id) {
 		// TODO Auto-generated method stub
 		Optional<TipoPastel> tipoPastel= tipoPastelDao.findById(id);
@@ -40,6 +43,18 @@ public class TipoPastelService implements ITipoPastelService {
 		} else {
 			return null;
 		}
+	}
+
+	@Override
+	public void delete(UUID id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public TipoPastel findById(UUID id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
